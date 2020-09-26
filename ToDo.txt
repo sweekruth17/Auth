@@ -1,0 +1,17 @@
+-add doc option in listview in user ui
+-map bluetooth button in listview to ble phone setting
+-in user navigation map each option to to a new page(hopefull stateful widgets)
+-do update password->https://www.youtube.com/watch?v=a6c0R6pcbU8&list=PLgGjX33Qsw-Ha_8ks9im86sLIihimuYrr&index=9
+-set user profile picture from gallery->https://www.youtube.com/watch?v=Y3AtNC684vg&list=PLgGjX33Qsw-Ha_8ks9im86sLIihimuYrr&index=10
+-display user name in home screen(need to use quering)->https://www.youtube.com/watch?v=mzo830R8OCk&list=PLgGjX33Qsw-Ha_8ks9im86sLIihimuYrr&index=18
+-doctor registration->firebase_auth and firestore
+-creating doctor ui(shishir)
+-----------------------------------------------------------------------------------------------------
+Second phase development
+-developing rating for doctors
+-to enable user to select doctor based on rating(user side)
+-quering the specific user data to doctor
+-adding functionality to main buttons in user UI(creating new pages stateful i guess) 
+-doctor feedback can be obtained via email phone or text
+-obscure screenshot of patient data
+-

@@ -1,0 +1,298 @@
+// from body of scaffold
+Wrap(children: [
+        Container(
+            child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            TextFormField(
+              //weight
+              validator: (input) {
+                if (input.isEmpty) return "Please enter your Username";
+              },
+              onSaved: (input) => username = input,
+              decoration: InputDecoration(
+                  icon: Icon(
+                    MdiIcons.textAccount,
+                    size: 25.0,
+                  ),
+                  labelText: "Username",
+                  hintText: "Happy"),
+            ),
+            TextFormField(
+              validator: (input) {
+                if (input.isEmpty) return "Please enter an E-mail";
+              },
+              onSaved: (input) {
+                _email = input;
+                email = _email;
+              },
+              decoration: InputDecoration(
+                  icon: Icon(
+                    CupertinoIcons.mail_solid,
+                    size: 25.0,
+                  ),
+                  labelText: "E-mail",
+                  hintText: "abc@gamail.com"),
+            ),
+            TextFormField(
+              validator: (input) {
+                if (input.length >= 6)
+                  return "Please enter min length of 6 characters";
+              },
+              onSaved: (input) {
+                _password = input;
+                password = _password;
+              },
+              decoration: InputDecoration(
+                  icon: Icon(MdiIcons.key),
+                  labelText: "Password",
+                  hintText: "name!*&123"),
+            ),
+            TextFormField(
+              validator: (input1) {
+                if (input1.length >= 6 && input1 == confirm)
+                  return "Please enter min length of 6 characters";
+              },
+              onSaved: (input) => confirm = input,
+              decoration: InputDecoration(
+                  icon: Icon(MdiIcons.key),
+                  labelText: "Confirm Password",
+                  hintText: "name!*&123"),
+            ),
+            TextFormField(
+              //weight
+              validator: (input) {
+                confirm = input;
+                if (input.isEmpty) return "Please enter your Weight";
+              },
+              onSaved: (input) => weight = input,
+              decoration: InputDecoration(
+                  icon: Icon(
+                    MdiIcons.weight,
+                    size: 25.0,
+                  ),
+                  labelText: "Weight in Kg",
+                  hintText: "47"),
+            ),
+            TextFormField(
+              //weight
+              validator: (input) {
+                confirm = input;
+                if (input.isEmpty) return "Please enter your Height";
+              },
+              onSaved: (input) => height = input,
+              decoration: InputDecoration(
+                  icon: Icon(
+                    MdiIcons.ruler,
+                    size: 25.0,
+                  ),
+                  labelText: "Height in cm",
+                  hintText: "157"),
+            ),
+            TextFormField(
+              //weight
+              validator: (input) {
+                confirm = input;
+                if (input.isEmpty) return "Please enter your Blood type";
+              },
+              onSaved: (input) => blood_t = input,
+              decoration: InputDecoration(
+                  icon: Icon(
+                    MdiIcons.bloodBag,
+                    size: 25.0,
+                  ),
+                  labelText: "Blood Group",
+                  hintText: "B+"),
+            ),
+            TextFormField(
+              //weight
+              validator: (input) {
+                confirm = input;
+                //if (input.isEmpty) return "Please enter your Weight";
+              },
+              //onSaved: (input) => _email = input,
+              decoration: InputDecoration(
+                  //icon: Icon(
+                  //  MdiIcons.,
+                  //   size: 25.0,
+                  //  ),
+                  labelText: "         Any existing illnesses",
+                  hintText: "       (optional)"),
+            ),
+            Padding(
+                padding: EdgeInsets.all(10.0),
+                child: RaisedButton(
+                  splashColor: Colors.white,
+                  onPressed: signup,
+                  child: Text(
+                    "Sign-Up",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  color: Colors.tealAccent,
+                ))
+          ],
+        ))
+      ])
+      ---------------------------------------------------------------------------------------------
+      Form(
+          key: _formKey,
+          child: Column(
+            children: <Widget>[
+              TextFormField(
+                validator: (input) {
+                  if (input.isEmpty) {
+                    return 'Provide an email';
+                  }
+                },
+                decoration: InputDecoration(labelText: 'Email'),
+                onSaved: (input) => _email = input,
+              ),
+              TextFormField(
+                validator: (input) {
+                  if (input.length < 6) {
+                    return 'Longer password please';
+                  }
+                },
+                decoration: InputDecoration(labelText: 'Password'),
+                onSaved: (input) => _password = input,
+                obscureText: true,
+              ),
+              RaisedButton(
+                onPressed: signup,
+                child: Text('Sign up'),
+              ),
+            ],
+          )),
+          ----------------------------------------------------------------------------------------------
+          Form(
+            key: _formKey,
+            child: Wrap(children: [
+              Container(
+                  child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                  TextFormField(
+                    //weight
+                    validator: (input) {
+                      if (input.isEmpty) return "Please enter your Username";
+                    },
+                    onSaved: (input) => username = input,
+                    decoration: InputDecoration(
+                        icon: Icon(
+                          MdiIcons.textAccount,
+                          size: 25.0,
+                        ),
+                        labelText: "Username",
+                        hintText: "Happy"),
+                  ),
+                  TextFormField(
+                    validator: (input) {
+                      if (input.isEmpty) return "Please enter an E-mail";
+                    },
+                    onSaved: (input) {
+                      _email = input;
+                      // email = _email;
+                    },
+                    decoration: InputDecoration(
+                        icon: Icon(
+                          CupertinoIcons.mail_solid,
+                          size: 25.0,
+                        ),
+                        labelText: "E-mail",
+                        hintText: "abc@gamail.com"),
+                  ),
+                  TextFormField(
+                    validator: (input) {
+                      if (input.length <= 6)
+                        return "Please enter min length of 6 characters";
+                    },
+                    onSaved: (input) {
+                      _password = input;
+                      password = _password;
+                    },
+                    decoration: InputDecoration(
+                        icon: Icon(MdiIcons.key),
+                        labelText: "Password",
+                        hintText: "name!*&123"),
+                  ),
+                  TextFormField(
+                    validator: (input1) {
+                      if (input1.length <= 6 && input1 == _confirm)
+                        return "Please enter min length of 6 characters";
+                    },
+                    onSaved: (input) => _confirm = input,
+                    decoration: InputDecoration(
+                        icon: Icon(MdiIcons.key),
+                        labelText: "Confirm Password",
+                        hintText: "name!*&123"),
+                  ),
+                  TextFormField(
+                    //weight
+                    validator: (input) {
+                      if (input.isEmpty) return "Please enter your Weight";
+                    },
+                    onSaved: (input) => weight = input,
+                    decoration: InputDecoration(
+                        icon: Icon(
+                          MdiIcons.weight,
+                          size: 25.0,
+                        ),
+                        labelText: "Weight in Kg",
+                        hintText: "47"),
+                  ),
+                  TextFormField(
+                    //weight
+                    validator: (input) {
+                      if (input.isEmpty) return "Please enter your Height";
+                    },
+                    onSaved: (input) => height = input,
+                    decoration: InputDecoration(
+                        icon: Icon(
+                          MdiIcons.ruler,
+                          size: 25.0,
+                        ),
+                        labelText: "Height in cm",
+                        hintText: "157"),
+                  ),
+                  TextFormField(
+                    //weight
+                    validator: (input) {
+                      if (input.isEmpty) return "Please enter your Blood type";
+                    },
+                    onSaved: (input) => blood_t = input,
+                    decoration: InputDecoration(
+                        icon: Icon(
+                          MdiIcons.bloodBag,
+                          size: 25.0,
+                        ),
+                        labelText: "Blood Group",
+                        hintText: "B+"),
+                  ),
+                  TextFormField(
+                    //weight
+                    validator: (input) {
+                      illness = input;
+                    },
+
+                    decoration: InputDecoration(
+                        //icon: Icon(
+                        //  MdiIcons.,
+                        //   size: 25.0,
+                        //  ),
+                        labelText: "         Any existing illnesses",
+                        hintText: "       (optional)"),
+                  ),
+                  Padding(
+                      padding: EdgeInsets.all(10.0),
+                      child: RaisedButton(
+                        splashColor: Colors.white,
+                        onPressed: signup,
+                        child: Text(
+                          "Sign-Up",
+                          style: TextStyle(color: Colors.black),
+                        ),
+                        color: Colors.tealAccent,
+                      ))
+                ],
+              ))
+            ]))
